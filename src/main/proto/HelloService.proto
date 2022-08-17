@@ -1,0 +1,25 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.playwithgrpc;
+
+message HelloRequest {
+  string firstname = 1;
+  string lastname = 2;
+}
+
+message abc {
+
+}
+
+message HelloResponse {
+
+  string greeting = 1;
+  repeated abc  abc =2;
+
+}
+
+service HelloService {
+  rpc hello(HelloRequest) returns (HelloResponse);
+  rpc helloWithStream(HelloRequest) returns (stream HelloResponse);
+}
+

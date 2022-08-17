@@ -1,0 +1,9 @@
+server:
+  port: 8090
+grpc:
+  port: 6567
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;database=TEETHCARE;encrypt=false;sendTimeAsDatetime=false
+    username: sa
+    password: 12345

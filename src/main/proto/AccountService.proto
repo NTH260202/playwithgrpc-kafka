@@ -1,0 +1,25 @@
+
+syntax = "proto3";
+option java_multiple_files = true;
+import "google/protobuf/timestamp.proto";
+
+package com.example.playwithgrpc;
+
+message GetRequest {
+  int32 min_age = 11;
+  int32 max_age = 2;
+  string user_id = 3;
+}
+
+message AccountResponse {
+  string fullName = 1;
+  string username = 2;
+  google.protobuf.Timestamp dateOfBirth = 4;
+}
+
+service AccountService {
+  rpc getAll(GetRequest) returns (stream AccountResponse);
+  rpc getById(GetRequest) returns (AccountResponse);
+  rpc getAll1(stream GetRequest) returns (stream AccountResponse);
+  rpc getById1(stream GetRequest) returns (AccountResponse);
+}

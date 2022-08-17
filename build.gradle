@@ -1,0 +1,50 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.1'
+    id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+    id 'java'
+    id "io.github.lognet.grpc-spring-boot" version '4.8.0'
+}
+grpcSpringBoot {
+    grpcSpringBootStarterVersion.set("4.8.0")// (1)
+    grpcVersion.set("1.47.0")//(2)
+    protocVersion.set("3.19.2")//(3)
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.grpc:grpc-protobuf:1.48.1'
+    // https://mvnrepository.com/artifact/io.grpc/grpc-stub
+    implementation 'io.grpc:grpc-stub:1.48.1'
+    // https://mvnrepository.com/artifact/io.grpc/grpc-netty
+    implementation 'io.grpc:grpc-netty:1.48.1'
+    implementation 'com.google.protobuf:protobuf-java:3.21.5'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.2'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:11.2.0.jre11'
+
+    compileOnly ('io.github.lognet:grpc-spring-boot-starter:4.8.0') {
+        exclude group: 'io.grpc', module: 'grpc-netty-shaded'
+    }
+    compileOnly 'io.grpc:grpc-netty:1.47.0'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
