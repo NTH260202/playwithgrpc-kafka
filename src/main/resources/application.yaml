@@ -7,3 +7,7 @@ spring:
     url: jdbc:sqlserver://localhost:1433;database=TEETHCARE;encrypt=false;sendTimeAsDatetime=false
     username: sa
     password: 12345
+logging:
+  file:
+    name: spring-boot-elk.log
+    path: /home/thanhha/Documents/log
