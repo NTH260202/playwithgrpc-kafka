@@ -14,6 +14,5 @@ public interface AccountRepository extends CrudRepository<Account, Integer> {
 
     public interface Account {
         String getFullName();
-        String setFullName();
     }
 }

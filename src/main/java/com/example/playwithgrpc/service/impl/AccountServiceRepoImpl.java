@@ -3,6 +3,7 @@ package com.example.playwithgrpc.service.impl;
 import com.example.playwithgrpc.mapper.AccountMapper;
 import com.example.playwithgrpc.model.dto.AccountDTO;
 import com.example.playwithgrpc.repository.AccountRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class AccountServiceRepoImpl {
-    @Autowired
-    private AccountRepository accountRepository;
 
-    @Autowired
-    private AccountMapper accountMapper;
+    private final AccountRepository accountRepository;
+    private final AccountMapper accountMapper;
 
     @Cacheable(value = "Account", key = "#name")
     public List<AccountDTO> getByName(String name) {
