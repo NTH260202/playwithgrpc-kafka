@@ -189,3 +189,79 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 2022-08-19 09:47:55.547  INFO 13803 --- [http-nio-8090-exec-8] c.e.p.controller.AccountController       : [AccountDTO(userId=null, username=null, fullName=Loc Tien, age=0)]
 2022-08-19 09:47:57.664  INFO 13803 --- [http-nio-8090-exec-9] c.e.p.controller.AccountController       : [AccountDTO(userId=null, username=null, fullName=Loc Tien, age=0)]
 2022-08-19 09:47:57.664  INFO 13803 --- [http-nio-8090-exec-9] c.e.p.controller.AccountController       : [AccountDTO(userId=null, username=null, fullName=Loc Tien, age=0)]
+2022-08-19 10:48:56.298  INFO 13803 --- [SpringApplicationShutdownHook] o.l.springboot.grpc.GRpcServerRunner     : Shutting down gRPC server ...
+2022-08-19 10:48:56.301  INFO 13803 --- [SpringApplicationShutdownHook] o.l.springboot.grpc.GRpcServerRunner     : gRPC server stopped.
+2022-08-19 10:48:56.315  INFO 13803 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-19 10:48:56.317  INFO 13803 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-19 10:48:56.319  INFO 13803 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-19 10:48:58.056  INFO 19884 --- [main] c.e.p.PlaywithgrpcApplication            : Starting PlaywithgrpcApplication using Java 11.0.16.1 on b560m with PID 19884 (/home/thanhha/Documents/project/playwithgrpc-accountservice/build/classes/java/main started by thanhha in /home/thanhha/Documents/project/playwithgrpc-accountservice)
+2022-08-19 10:48:58.057  INFO 19884 --- [main] c.e.p.PlaywithgrpcApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:48:58.339  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-19 10:48:58.340  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 10:48:58.350  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+2022-08-19 10:48:58.451  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-19 10:48:58.451  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-19 10:48:58.486  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2022-08-19 10:48:58.492  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-19 10:48:58.492  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 10:48:58.495  INFO 19884 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.playwithgrpc.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-08-19 10:48:58.495  INFO 19884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-08-19 10:48:58.846  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-08-19 10:48:58.851  INFO 19884 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 10:48:58.851  INFO 19884 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-19 10:48:58.902  INFO 19884 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-19 10:48:58.902  INFO 19884 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 823 ms
+2022-08-19 10:48:59.076  INFO 19884 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-19 10:48:59.098  INFO 19884 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-08-19 10:48:59.166  INFO 19884 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-19 10:48:59.209  INFO 19884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-19 10:48:59.352  INFO 19884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-19 10:48:59.362  INFO 19884 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-19 10:48:59.661  INFO 19884 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-19 10:48:59.665  INFO 19884 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-19 10:48:59.925  WARN 19884 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:49:00.195  INFO 19884 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-08-19 10:49:00.196  INFO 19884 --- [main] o.l.springboot.grpc.GRpcServerRunner     : Starting gRPC Server ...
+2022-08-19 10:49:00.198  INFO 19884 --- [main] o.l.springboot.grpc.GRpcServerRunner     : 'com.example.playwithgrpc.service.grpc.HelloServiceImpl' service has been registered.
+2022-08-19 10:49:00.198  INFO 19884 --- [main] o.l.springboot.grpc.GRpcServerRunner     : 'com.example.playwithgrpc.service.grpc.AccountServiceImpl' service has been registered.
+2022-08-19 10:49:00.198  INFO 19884 --- [main] o.l.springboot.grpc.GRpcServerRunner     : 'org.lognet.springboot.grpc.health.DefaultHealthStatusService$$EnhancerBySpringCGLIB$$2ad9b68b' service has been registered.
+2022-08-19 10:49:00.242  INFO 19884 --- [main] o.l.springboot.grpc.GRpcServerRunner     : gRPC Server started, listening on port 6567.
+2022-08-19 10:49:00.248  INFO 19884 --- [main] c.e.p.PlaywithgrpcApplication            : Started PlaywithgrpcApplication in 2.444 seconds (JVM running for 2.861)
+2022-08-19 10:50:46.941  INFO 19884 --- [SpringApplicationShutdownHook] o.l.springboot.grpc.GRpcServerRunner     : Shutting down gRPC server ...
+2022-08-19 10:50:46.943  INFO 19884 --- [SpringApplicationShutdownHook] o.l.springboot.grpc.GRpcServerRunner     : gRPC server stopped.
+2022-08-19 10:50:46.955  INFO 19884 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-19 10:50:46.956  INFO 19884 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-19 10:50:46.962  INFO 19884 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-19 10:50:48.633  INFO 20227 --- [main] c.e.p.PlaywithgrpcApplication            : Starting PlaywithgrpcApplication using Java 11.0.16.1 on b560m with PID 20227 (/home/thanhha/Documents/project/playwithgrpc-accountservice/build/classes/java/main started by thanhha in /home/thanhha/Documents/project/playwithgrpc-accountservice)
+2022-08-19 10:50:48.635  INFO 20227 --- [main] c.e.p.PlaywithgrpcApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 10:50:48.968  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-19 10:50:48.969  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 10:50:48.978  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-08-19 10:50:49.098  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-19 10:50:49.098  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-19 10:50:49.139  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+2022-08-19 10:50:49.146  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-19 10:50:49.147  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-19 10:50:49.152  INFO 20227 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.playwithgrpc.repository.AccountRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-08-19 10:50:49.152  INFO 20227 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2022-08-19 10:50:49.483  INFO 20227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-08-19 10:50:49.487  INFO 20227 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 10:50:49.488  INFO 20227 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-08-19 10:50:49.536  INFO 20227 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-19 10:50:49.536  INFO 20227 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 875 ms
+2022-08-19 10:50:49.724  INFO 20227 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-19 10:50:49.749  INFO 20227 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-08-19 10:50:49.819  INFO 20227 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-19 10:50:49.863  INFO 20227 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-19 10:50:50.016  INFO 20227 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-19 10:50:50.025  INFO 20227 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-19 10:50:50.307  INFO 20227 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-19 10:50:50.311  INFO 20227 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-19 10:50:50.569  WARN 20227 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-19 10:50:50.845  INFO 20227 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-08-19 10:50:50.846  INFO 20227 --- [main] o.l.springboot.grpc.GRpcServerRunner     : Starting gRPC Server ...
+2022-08-19 10:50:50.848  INFO 20227 --- [main] o.l.springboot.grpc.GRpcServerRunner     : 'com.example.playwithgrpc.service.grpc.HelloServiceImpl' service has been registered.
+2022-08-19 10:50:50.848  INFO 20227 --- [main] o.l.springboot.grpc.GRpcServerRunner     : 'com.example.playwithgrpc.service.grpc.AccountServiceImpl' service has been registered.
+2022-08-19 10:50:50.848  INFO 20227 --- [main] o.l.springboot.grpc.GRpcServerRunner     : 'org.lognet.springboot.grpc.health.DefaultHealthStatusService$$EnhancerBySpringCGLIB$$e5ee73f0' service has been registered.
+2022-08-19 10:50:50.890  INFO 20227 --- [main] o.l.springboot.grpc.GRpcServerRunner     : gRPC Server started, listening on port 6567.
+2022-08-19 10:50:50.897  INFO 20227 --- [main] c.e.p.PlaywithgrpcApplication            : Started PlaywithgrpcApplication in 2.489 seconds (JVM running for 2.96)

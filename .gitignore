@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+playwithgrpc.log
+playwithgrpc.log.2022-08-18.0.gz
