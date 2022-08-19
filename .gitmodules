@@ -1,1 +1,4 @@
 
+[submodule "src/main/java/com/example/playwithgrpc/helper"]
+	path = src/main/java/com/example/playwithgrpc/helper
+	url = git@github.com:NTH260202/my-helper.git
