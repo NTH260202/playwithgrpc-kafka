@@ -3,6 +3,7 @@ package com.example.playwithgrpc.model.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.redis.core.RedisHash;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -11,6 +12,7 @@ import java.sql.Date;
 @Setter
 @NoArgsConstructor
 @Entity
+//@RedisHash(value = "Account")
 @Table(name = "account")
 public class Account {
 
@@ -37,7 +39,7 @@ public class Account {
     @Column(name = "last_name")
     private String lastName;
 
-    private String fullName;
+//    private String fullName;
 
     @Column(name = "avatar_image")
     private String avatarImage;

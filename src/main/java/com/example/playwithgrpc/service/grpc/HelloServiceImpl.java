@@ -3,12 +3,13 @@ package com.example.playwithgrpc.service.grpc;
 import com.example.playwithgrpc.HelloRequest;
 import com.example.playwithgrpc.HelloResponse;
 import com.example.playwithgrpc.HelloServiceGrpc;
-import com.example.playwithgrpc.HelloServiceGrpc.HelloServiceBlockingStub;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
+import org.springframework.cache.annotation.Cacheable;
 
 @GRpcService
 public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
+
     @Override
     public void hello(HelloRequest request, StreamObserver<HelloResponse> responses) {
         String greeting = new StringBuilder()

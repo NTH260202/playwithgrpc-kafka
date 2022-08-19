@@ -4,10 +4,19 @@ grpc:
   port: 6567
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;database=TEETHCARE;encrypt=false;sendTimeAsDatetime=false
-    username: sa
-    password: 12345
+    url: jdbc:mysql://localhost:3306/bizzone_id
+    username: thanhha
+    password: 013845ha
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
 logging:
   file:
-    name: spring-boot-elk.log
-    path: /home/thanhha/Documents/log
+    name: playwithgrpc.log
+    path: /home/thanhha/Documents/log/playwithgrpc.log
