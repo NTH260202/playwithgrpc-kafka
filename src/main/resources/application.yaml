@@ -1,22 +1,33 @@
 server:
-  port: 8090
+  port: 8096
 grpc:
-  port: 6567
+  port: 6565
 spring:
+  data:
+    mongodb:
+      uri: ${HRM_MONGO_DB_URL:mongodb://bizzone_hrm:bizzoneDEV2022@10.30.1.34:30007/bizzone_hrm?authSource=admin&directConnection=true&ssl=false}
+      auto-index-creation: true
+      uuid-representation: standard
   datasource:
     url: jdbc:mysql://localhost:3306/bizzone_id
     username: thanhha
+#    username: root
     password: 013845ha
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
   cache:
     type: redis
   redis:
     host: localhost
     port: 6379
-logging:
-  file:
-    name: playwithgrpc.log
-    path: /home/thanhha/Documents/log/playwithgrpc.log
+#kafka:
+#  bootstrap-servers: localhost:9092
+#  topic-1: reflectoring-1
+#  topic-4: reflectoring-user
+#logging:
+#  file:
+#    name: playwithgrpc.log
+#    path: /home/thanhha/Documents/log/playwithgrpc.log

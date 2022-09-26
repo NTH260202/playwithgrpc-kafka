@@ -3,10 +3,11 @@ package com.example.playwithgrpc.model.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.redis.core.RedisHash;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -17,9 +18,19 @@ import java.sql.Date;
 public class Account {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(
+            name = "id",
+            insertable = false,
+            nullable = false,
+            columnDefinition = "BINARY(16)",
+            updatable = false
+    )
+    private UUID id;
 
     @Column(name = "username")
     private String username;
@@ -27,9 +38,6 @@ public class Account {
     @Column(name = "password")
     private String password;
 
-//    @ManyToOne
-//    @JoinColumn(name = "role_id", referencedColumnName = "id")
-//    private Role role;
     @Column(name = "role_id")
     private Integer roleId;
 
@@ -38,8 +46,6 @@ public class Account {
 
     @Column(name = "last_name")
     private String lastName;
-
-//    private String fullName;
 
     @Column(name = "avatar_image")
     private String avatarImage;

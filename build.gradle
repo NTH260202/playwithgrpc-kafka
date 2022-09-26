@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.1'
+    id 'org.springframework.boot' version '2.7.2'
     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'java'
     id "io.github.lognet.grpc-spring-boot" version '4.8.0'
@@ -27,23 +27,28 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-parent:2.7.3'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.7.2'
+    implementation 'org.springframework.boot:spring-boot-starter-cache:2.7.2'
+    implementation 'org.springframework:spring-tx'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.kafka:spring-kafka:2.9.0'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
     implementation 'io.grpc:grpc-protobuf:1.48.1'
     // https://mvnrepository.com/artifact/io.grpc/grpc-stub
     implementation 'io.grpc:grpc-stub:1.48.1'
     // https://mvnrepository.com/artifact/io.grpc/grpc-netty
     implementation 'io.grpc:grpc-netty:1.48.1'
     implementation 'com.google.protobuf:protobuf-java:3.21.5'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.2'
-    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
-    implementation 'mysql:mysql-connector-java:8.0.30'
-    implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.7.2'
-
-    implementation 'org.springframework.boot:spring-boot-starter-cache:2.7.2'
-
     compileOnly ('io.github.lognet:grpc-spring-boot-starter:4.8.0') {
         exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     }
     compileOnly 'io.grpc:grpc-netty:1.47.0'
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation 'mysql:mysql-connector-java:8.0.30'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -53,8 +58,6 @@ dependencies {
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
 //    testAnnotationProcessor "org.mapstruct:mapstruct- processor:1.5.2.Final"
     implementation 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
-
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 

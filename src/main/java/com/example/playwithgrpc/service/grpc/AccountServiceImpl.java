@@ -3,7 +3,7 @@ package com.example.playwithgrpc.service.grpc;
 import com.example.playwithgrpc.AccountResponse;
 import com.example.playwithgrpc.AccountServiceGrpc;
 import com.example.playwithgrpc.GetRequest;
-import com.example.playwithgrpc.model.dto.AccountDTO;
+import com.example.playwithgrpc.model.request.AccountDTO;
 import com.google.protobuf.Timestamp;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;

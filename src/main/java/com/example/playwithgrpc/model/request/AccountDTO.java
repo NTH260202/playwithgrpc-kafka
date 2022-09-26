@@ -1,4 +1,4 @@
-package com.example.playwithgrpc.model.dto;
+package com.example.playwithgrpc.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

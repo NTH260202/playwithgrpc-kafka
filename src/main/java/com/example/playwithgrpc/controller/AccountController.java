@@ -1,6 +1,6 @@
 package com.example.playwithgrpc.controller;
 
-import com.example.playwithgrpc.model.dto.AccountDTO;
+import com.example.playwithgrpc.model.request.AccountDTO;
 import com.example.playwithgrpc.service.impl.AccountServiceRepoImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
