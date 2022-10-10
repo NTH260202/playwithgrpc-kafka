@@ -1,7 +1,7 @@
 package com.example.playwithgrpc.service.grpc;
 
 import com.example.playwithgrpc.model.entity.Clinic;
-import com.example.playwithgrpc.repository.ClinicRepository;
+import com.example.playwithgrpc.repository.jpa.ClinicRepository;
 import com.unicloud.bizzone.demo.service.ClinicDetailResponse;
 import com.unicloud.bizzone.demo.service.ClinicServiceGrpc;
 import io.grpc.stub.StreamObserver;

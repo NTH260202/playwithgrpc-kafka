@@ -1,7 +1,7 @@
 package com.example.playwithgrpc.controller;
 
 import com.example.playwithgrpc.model.entity.Clinic;
-import com.example.playwithgrpc.repository.ClinicRepository;
+import com.example.playwithgrpc.repository.jpa.ClinicRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

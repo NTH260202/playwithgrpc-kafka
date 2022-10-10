@@ -1,4 +1,4 @@
-package com.example.playwithgrpc.repository;
+package com.example.playwithgrpc.repository.jpa;
 
 import com.example.playwithgrpc.model.entity.Clinic;
 import org.springframework.data.jpa.repository.JpaRepository;

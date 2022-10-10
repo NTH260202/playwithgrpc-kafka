@@ -1,4 +1,4 @@
-package com.example.playwithgrpc.repository;
+package com.example.playwithgrpc.repository.jpa;
 
 import com.example.playwithgrpc.model.query.BookingQuery;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +11,5 @@ public interface BookingQueryRepository extends JpaRepository<BookingQuery, UUID
 
     List<BookingQuery> findByDentistId(UUID dentistId);
     List<BookingQuery> findByPatientId(UUID patientId);
+    BookingQuery getBookingQueryById(UUID bookingId);
 }

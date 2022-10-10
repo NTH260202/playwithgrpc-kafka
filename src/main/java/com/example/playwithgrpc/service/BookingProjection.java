@@ -2,7 +2,7 @@ package com.example.playwithgrpc.service;
 
 import com.example.playwithgrpc.model.query.BookingQuery;
 import com.example.playwithgrpc.model.request.BookingByUserQuery;
-import com.example.playwithgrpc.repository.BookingQueryRepository;
+import com.example.playwithgrpc.repository.jpa.BookingQueryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

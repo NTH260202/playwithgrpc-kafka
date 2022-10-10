@@ -1,5 +1,6 @@
 package com.example.playwithgrpc.model.query;
 
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -7,6 +8,10 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "booking_query")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookingQuery {
     @Id
     @GeneratedValue(generator = "UUID")

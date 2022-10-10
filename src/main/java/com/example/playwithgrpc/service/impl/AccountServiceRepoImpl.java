@@ -2,7 +2,7 @@ package com.example.playwithgrpc.service.impl;
 
 import com.example.playwithgrpc.mapper.AccountMapper;
 import com.example.playwithgrpc.model.request.AccountDTO;
-import com.example.playwithgrpc.repository.AccountRepository;
+import com.example.playwithgrpc.repository.jpa.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

@@ -1,5 +1,6 @@
 package com.example.playwithgrpc.model.event;
 
+import com.example.playwithgrpc.model.EventModel;
 import com.example.playwithgrpc.model.enumerate.EventType;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -19,7 +20,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Event {
+public class Event{
     @Id
     private UUID id;
     @Field
@@ -27,5 +28,5 @@ public class Event {
     @Field
     private EventType eventType;
     @Field
-    private Object eventModel;
+    private CreateBookingEvent eventModel;
 }

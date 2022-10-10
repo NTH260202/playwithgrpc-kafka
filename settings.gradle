@@ -5,3 +5,9 @@ pluginManagement {
 }
 rootProject.name = 'playwithgrpc-accountservice'
 
+//sourceControl{
+//    gitRepository(URI.create("https://github.com/PM-Master/policy-machine-core.git")) {
+//        producesModule("com.github.PM-Master:policy-machine-core")
+//    }
+//}
+
