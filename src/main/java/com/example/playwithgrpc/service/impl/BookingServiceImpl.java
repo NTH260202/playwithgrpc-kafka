@@ -25,7 +25,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class BookingServiceImpl {
     private final BookingAggregate bookingAggregate;
-    private final BookingQueryRepository bookingQueryRepository;
+    private final BookingProjector bookingProjector;
 
     private final KafkaTemplate<String, EventMessage> eventMessageKafkaTemplate;
     public void create(CreateBookingCommand command) {
@@ -34,6 +34,7 @@ public class BookingServiceImpl {
 
         EventMessage message = new EventMessage();
         message.setEvents(events);
+//        bookingProjector.project(null, events.get(0));
         ListenableFuture<SendResult<String, EventMessage>> future =
                 eventMessageKafkaTemplate.send("reflectoring-1", message);
         future.addCallback(new ListenableFutureCallback<SendResult<String, EventMessage>>() {

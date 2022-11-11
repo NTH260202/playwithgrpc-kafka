@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.UUID;
 
 @RequiredArgsConstructor
-@Component
+@Service
 @Slf4j
 public class BookingProjector {
     private final BookingQueryRepository repository;
@@ -33,9 +33,8 @@ public class BookingProjector {
         if (bookingQuery == null) {
             bookingQuery = new BookingQuery();
         }
-        bookingMapper.updateCreateBookingEventToBookingQuery(event, bookingQuery);
+        bookingQuery = bookingMapper.updateCreateBookingEventToBookingQuery(event, bookingQuery);
         log.info("{} booking is updated!", bookingQuery.getDentistId());
-        repository.save(new BookingQuery(null, null, null, "test", null));
         repository.save(bookingQuery);
     }
 }

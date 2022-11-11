@@ -13,5 +13,5 @@ public interface BookingMapper {
     BookingCommand mapCreateBookingCommandToBookingCommand(CreateBookingCommand createBookingCommand);
     CreateBookingEvent mapCreateBookingCommandToCreateBookingEvent(CreateBookingCommand createBookingCommand);
     BookingQuery mapCreateBookingEventToBookingQuery(CreateBookingEvent createBookingEvent);
-    void updateCreateBookingEventToBookingQuery(CreateBookingEvent createBookingEvent, @MappingTarget BookingQuery bookingQuery);
+    BookingQuery updateCreateBookingEventToBookingQuery(CreateBookingEvent createBookingEvent, @MappingTarget BookingQuery bookingQuery);
 }

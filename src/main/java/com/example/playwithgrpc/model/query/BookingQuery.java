@@ -21,11 +21,26 @@ public class BookingQuery {
     )
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
-    @Column(name = "patient_id")
+
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(name = "patient_id", columnDefinition = "BINARY(16)")
     private UUID patientId;
-    @Column(name = "dentist_id")
+
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(name = "dentist_id", columnDefinition = "BINARY(16)")
     private UUID dentistId;
     private String note;
-    @Column(name = "voucher_id")
+
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
+    @Column(name = "voucher_id", columnDefinition = "BINARY(16)")
     private UUID voucherId;
 }
