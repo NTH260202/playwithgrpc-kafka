@@ -1,5 +1,8 @@
 package com.example.playwithgrpc.schedule;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.novemberain.quartz.mongodb.util.SerialUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
@@ -16,6 +19,7 @@ import java.util.Date;
 public class NotificationJob extends QuartzJobBean {
     @Override
     public void executeInternal(JobExecutionContext context) throws JobExecutionException {
+
         log.info("Send notification!");
     }
 }

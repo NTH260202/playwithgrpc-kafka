@@ -32,12 +32,15 @@ public class JobScheduleCreator {
         return factoryBean.getObject();
     }
 
-    public SimpleTrigger createSimpleTrigger(String triggerName, Date startTime, Long repeatTime, int misFireInstruction) {
+    public SimpleTrigger createSimpleTrigger(String triggerName, String triggerGroup, Date startTime, Long repeatTime, int repeatCount,
+                                             int misFireInstruction, JobDetail jobDetail) {
         SimpleTriggerFactoryBean factoryBean = new SimpleTriggerFactoryBean();
         factoryBean.setName(triggerName);
+        factoryBean.setGroup(triggerGroup);
+        factoryBean.setJobDetail(jobDetail);
         factoryBean.setStartTime(startTime);
         factoryBean.setRepeatInterval(repeatTime);
-        factoryBean.setRepeatCount(SimpleTrigger.REPEAT_INDEFINITELY);
+        factoryBean.setRepeatCount(repeatCount);
         factoryBean.setMisfireInstruction(misFireInstruction);
         factoryBean.afterPropertiesSet();
         return factoryBean.getObject();

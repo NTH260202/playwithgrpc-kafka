@@ -45,6 +45,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.kafka:spring-kafka:2.9.1'
     implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'commons-codec:commons-codec:1.15'
+
 
     implementation 'io.grpc:grpc-protobuf:1.48.1'
     // https://mvnrepository.com/artifact/io.grpc/grpc-stub
