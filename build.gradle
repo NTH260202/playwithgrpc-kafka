@@ -55,7 +55,7 @@ dependencies {
     compileOnly ('io.github.lognet:grpc-spring-boot-starter:4.8.0') {
         exclude group: 'io.grpc', module: 'grpc-netty-shaded'
     }
-    compileOnly 'io.grpc:grpc-netty:1.47.0'
+    compileOnly 'io.fluidsonic.mirror:quartz-mongodb:2.2.0-rc2'
 
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     implementation 'mysql:mysql-connector-java:8.0.30'

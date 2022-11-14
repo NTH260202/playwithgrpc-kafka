@@ -8,7 +8,9 @@ spring:
       org.quartz:
         jobStore:
           class: com.novemberain.quartz.mongodb.MongoDBJobStore
-          mongoUri: mongodb://10.30.1.34:30007/bizzone_net_office?authSource=admin&directConnection=true&ssl=false
+          mongoUri: mongodb://bizzone_net_office:bizzoneDEV2022@10.30.1.34:30007/bizzone_net_office?authSource=admin&directConnection=true&ssl=false
+#          username: ${DATABASE_USER:bizzone_net_office}
+#          password: ${DATABASE_PASSWORD:bizzoneDEV2022}
           collectionPrefix: quartz
           isClustered: true
         threadPool:
@@ -18,9 +20,9 @@ spring:
           instanceName: invoices-cluster
   data:
     mongodb:
-      username: ${DATABASE_USER:bizzone_crm}
+      username: ${DATABASE_USER:bizzone_net_office}
       password: ${DATABASE_PASSWORD:bizzoneDEV2022}
-      database: ${DATABASE_NAME:bizzone_crm}
+      database: ${DATABASE_NAME:bizzone_net_office}
       port: ${DATABASE_PORT:30007}
       host: ${DATABASE_HOST:10.30.1.34}
       authentication-database: admin
@@ -40,8 +42,8 @@ spring:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL8Dialect
   kafka:
-    consumer:
-      group-id: reflectoring-group
+#    consumer:
+#      group-id: reflectoring-group
 
 #  cache:
 #    type: redis

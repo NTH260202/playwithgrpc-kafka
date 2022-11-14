@@ -11,7 +11,6 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 @EnableMongoRepositories(basePackageClasses = EventStore.class)
 @EnableJpaRepositories(basePackages = {"com.example.playwithgrpc.repository.jpa"})
-@EnableConfigurationProperties(QuartzConfig.class)
 public class PlaywithgrpcApplication {
 
     public static void main(String[] args) {

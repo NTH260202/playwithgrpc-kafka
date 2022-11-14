@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Slf4j
-@DisallowConcurrentExecution
+//@DisallowConcurrentExecution
 public class NotificationJob extends QuartzJobBean {
     @Override
     public void executeInternal(JobExecutionContext context) throws JobExecutionException {
